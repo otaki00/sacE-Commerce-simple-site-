@@ -1,6 +1,6 @@
 # ECommerce
 
-this project made with angular, bootstrap and sweetalert
+### this project made with angular, bootstrap and sweetalert
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.1.
