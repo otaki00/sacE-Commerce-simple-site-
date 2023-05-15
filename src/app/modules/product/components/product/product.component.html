@@ -1,0 +1,16 @@
+<div class="card text-bg-danger m-3 myhover" style="width: 18rem;">
+    <img src="{{item.image}}" class="card-img-top" alt="..." style="height: 250px;">
+    <div class="card-body">
+        <div class="title-container overflow-hidden " style="height: 50px;">
+            <h5 class="card-title"> {{item.title}} </h5>
+        </div>
+        <hr>
+        <div class="discrption-container overflow-hidden my-2" >
+            <p class="card-text" style="height: 100px;"> {{item.description}}</p>
+        </div>
+        <div class="w-100 d-flex justify-content-between align-items-center">
+            <button class="btn btn-dark" [routerLink]="['/details', item.id]">See More Details </button>
+            <h5 class="badge text-bg-light"> {{item.price}} USD </h5>
+        </div>
+    </div>
+</div>

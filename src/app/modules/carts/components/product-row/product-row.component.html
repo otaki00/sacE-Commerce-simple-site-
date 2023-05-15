@@ -1,0 +1,15 @@
+
+    <td><img src="{{ item.imageSrc}}" alt="{{ item.title }}" width="80px" height="80px"></td>
+    <td> {{ item.title }} </td>
+    <td> {{ item.price }}USD </td>
+    <td>
+        <div class="row d-flex flex-row mt-5">
+            <button class="btn btn-warning fs-5 fw-bold " (click)="subItemQuantity()">−</button>
+            <input type="number" class="form-control w-25" min="1" [(ngModel)]="item.quantity">
+            <button class="btn btn-warning fs-5 fw-bold" (click)="addItemQuantity()">+</button>
+        </div>
+    </td>
+    <td> {{ item.price * item.quantity }}USD</td>
+    <td>
+        <button class="btn btn-danger">Delete</button>
+    </td>

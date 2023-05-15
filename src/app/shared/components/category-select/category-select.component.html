@@ -1,0 +1,5 @@
+<label class="form-label text-warning" for="categroyOpt">{{ title }}</label>
+<select name="categroyOpt" id="categroyOpt" class="form-select" (change)="getFiltteredData($event)">
+    <option value="all" selected>All</option>
+    <option *ngFor="let cat of categories" value="{{cat}}"> {{cat}} </option>
+</select>

@@ -1,0 +1,28 @@
+<div class="container w-100 mt-5 m-auto">
+    <div class="row" *ngIf="!loading"> 
+        <div class="col-md-9 col-sm-12">
+            <h1>{{ data.title }}</h1>
+        </div>
+        <div class="col-md-4 col-sm-9 mt-3">
+            <img src="{{ data.image }}" class="img-fluid" alt="{{ data.title }}">
+        </div>
+        <div class="col-md-6 col-sm-12 m-3 p-3">
+            <div class="container ">
+                <h3 class="mb-3">Category : {{ data.category }} </h3>
+                <p class="mb-3 fs-5 fw-semibold">Description : {{ data.description }} </p>
+                <h3 class="mb-3">Rate : {{ data.rating.rate }} </h3>
+                <h3 class="mb-3">Warehouse Items : {{ data.rating.count }} </h3>
+                <h3>price : {{ data.price }}$ </h3>
+                <div class="d-flex flex-row mt-5">
+                    <button class="btn btn-warning fs-5 fw-bold " (click)="subItemCount()">−</button>
+                    <input type="number" class="form-control w-25" min="1" [(ngModel)]="itemCount">
+                    <button class="btn btn-warning fs-5 fw-bold" (click)="addItemCount()">+</button>
+                    <button class="btn btn-success ms-5" (click)="addToCart($event)">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container w-100 d-flex justify-content-center ">
+        <app-spinner *ngIf="loading"></app-spinner>
+    </div>
+</div>
